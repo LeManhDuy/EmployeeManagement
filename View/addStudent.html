@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <title>Thêm nhân viên</title>
+</head>
+
+<body>
+    <form action="../Controller/C_Student.php?mod10='1'" method="post">
+        <h1 align="center">Thêm nhân viên</h1>
+        <br>
+        <div align="center">
+            <table>
+                <tr>
+                    <td>Mã nhân viên</td>
+                    <td><input id="txtID" name='IDNV'></td>
+                </tr>
+                <tr>
+                    <td>Họ và tên</td>
+                    <td><input id="txtID" name='Hoten'></td>
+                </tr>
+                <tr>
+                    <td>Mã phòng ban</td>
+                    <td>
+                        <select name="IDPB">
+                            <?php 
+                                for ($i = 0; $i < sizeof($facultyList); $i++) {
+                                    echo "<option value='" . $facultyList[$i]->IDPB ."'>" . $facultyList[$i]->Tenpb ."</option>";
+                                }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input id="txtID" name='Diachi'></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+
+</html>

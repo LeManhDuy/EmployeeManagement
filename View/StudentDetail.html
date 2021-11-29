@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1 align="center">Chi tiết nhân sự phòng ban:</h1>
+    <table width="100%" border="1">
+        <TR>
+            <TH>Mã nhân sự</TH>
+            <TH>Họ tên</TH>
+            <TH>Mã phòng ban</TH>
+            <TH>Địa chỉ</TH>
+        </TR>
+        <?php
+        ?>
+        <TR align="center">
+            <TD>
+                <?php echo "<p> " . $student->IDNV . "</p>"; ?>
+            </TD>
+            <TD>
+                <?php echo "<p> " . $student->Hoten . "</p>"; ?>
+            </TD>
+            <TD>
+                <?php echo "<p> " . $student->IDPB . "</p>"; ?>
+            </TD>
+            <TD>
+                <?php echo "<p> " . $student->Diachi . "</p>"; ?>
+            </TD>
+        </TR>
+        <?php
+        ?>
+    </table>
+</body>
+
+</html>

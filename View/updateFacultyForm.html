@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1>Chi tiết phòng ban cần thay đổi</h1>
+    <form action="../Controller/C_Student.php?mod6='1'" method="post">
+        <div align="center">
+            <table>
+                <tr>
+                    <td>Mã phòng ban</td>
+                    <td>
+                        <?php
+                        echo "<input id='txtMoTa' value='$faculty->IDPB' name='IDPB' readonly>";
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tên phòng ban</td>
+                    <td>
+                        <?php
+                        echo "<input id='txtMoTa' value='$faculty->Tenpb' name='Tenpb'>";
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mô tả phòng ban</td>
+                    <td>
+                        <?php
+                        echo " <input id='txtMoTa' value='$faculty->Mota' name='Mota'>";
+                        ?>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">Cập nhật</button>
+            <br>
+            <br>
+            <p><a href="../index.php">Trang chủ</a></p>
+        </div>
+    </form>
+</body>
+
+</html>

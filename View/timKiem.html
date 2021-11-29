@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <div>
+        <h1> Tìm kiếm nhân sự </h1>
+        <br>
+        <form action="../Controller/C_Student.php?mod8='1'" method="post">
+            <input type="text" name="search">
+            <div style="margin : 20px;">
+                <label>Mã</label> <input style="height: 19px;width: 50px;" type="radio" name="infoType" value="IDNV" />
+                <label>Tên nhân sự</label> <input style="height: 19px;width: 50px;" type="radio" name="infoType"
+                    value="Hoten" />
+                <label>Mã phòng ban</label> <input style="height: 19px;width: 50px;" type="radio" name="infoType"
+                    value="IDPB" />
+                <label>Địa chỉ</label> <input style="height: 19px;width: 50px;" type="radio" name="infoType"
+                    value="Diachis" />
+                <label>Tên phòng ban</label> <input style="height: 19px;width: 50px;" type="radio" name="infoType"
+                    value="Tenpb" />
+            </div>
+            <input type="submit" value="Tìm kiếm">
+            <br>
+        </form>
+    </div>
+</body>
+
+</html>

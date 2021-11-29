@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1>Danh sách nhân sự tìm thấy được </h1>
+    <table width="100%" border="1">
+        <TR>
+            <TH>Mã nhân sự</TH>
+            <TH>Họ tên</TH>
+            <TH>Mã phòng ban</TH>
+            <TH>Địa chỉ</TH>
+        </TR>
+        <?php
+        if (sizeof($studentList) > 0) {
+            for ($i = 0; $i < sizeof($studentList); $i++) {
+        ?>
+        <TR align="center">
+            <TD>
+                <?php echo "<p> " . $studentList[$i]->IDNV . "</p>"; ?>
+            </TD>
+            <TD>
+                <?php echo "<p> " . $studentList[$i]->Hoten . "</p>"; ?>
+            </TD>
+            <TD>
+                <?php echo "<p> " . $studentList[$i]->IDPB . "</p>"; ?>
+            </TD>
+            <TD>
+                <?php echo "<p> " . $studentList[$i]->Diachi . "</p>"; ?>
+            </TD>
+        </TR>
+        <?php
+            }
+        } else {
+            echo "Không có sinh viên nào!!";
+        }
+        ?>
+    </table>
+    <br>
+</body>
+
+</html>
